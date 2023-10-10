@@ -1,0 +1,87 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: rgb(37, 37, 37);
+}
+
+ul {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    background: rgb(46, 46, 46);
+    width: 80%; /* Adjusted width for responsiveness */
+    max-width: 500px; /* Set a maximum width */
+    height: 70px;
+    border-radius: 10px;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: space-around; /* Center the list items horizontally */
+}
+
+ul li {
+    line-height: 70px;
+    flex-grow: 1; /* Distribute available space evenly among list items */
+    color: #fff;
+    text-transform: capitalize;
+    font-family: Arial, Helvetica, sans-serif;
+    list-style: none;
+    text-align: center;
+    font-size: 20px;
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+li:hover,
+#active {
+    color: rgb(9, 175, 134);
+}
+
+.bottom {
+    position: absolute;
+    width: 80px;
+    height: 6px;
+    background: rgb(251, 255, 6);
+    bottom: 0;
+    left: 10px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+
+
+
+li:nth-child(2):hover ~ .bottom{
+    left: 110px;
+    transition: 0.3s;
+}
+
+li:nth-child(3):hover ~ .bottom{
+    left: 210px;
+    transition: 0.3s;
+}
+
+li:nth-child(4):hover ~ .bottom{
+    left: 310px;
+    transition: 0.3s;
+}
+
+li:nth-child(5):hover ~ .bottom{
+    left: 410px;
+    transition: 0.3s;
+}
+
+
+/* Media Query for Smaller Screens */
+@media screen and (max-width: 768px) {
+    ul {
+        width: 90%; /* Adjusted width for smaller screens */
+    }
+
+    ul li {
+        font-size: 16px; /* Decrease font size for smaller screens */
+    }
+}
